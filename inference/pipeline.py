@@ -1,0 +1,1 @@
+# Defines the inference pipeline for the project
