@@ -1,4 +1,4 @@
-from .reddit_client import get_reddit_client
+from reddit_client import get_reddit_client
 
 def fetch_posts(subreddit_name, limit=100):
     """
@@ -41,3 +41,24 @@ def fetch_comments(post_id, limit=50):
             "post_id": post_id
         })
     return comments
+
+
+# test usage example:
+
+# def test_fetch():
+#     subreddit = "python"
+#     print(f"Fetching posts from r/{subreddit}...")
+#     posts = fetch_posts(subreddit, limit=5)
+#     print(f"Number of posts fetched: {len(posts)}")
+#     for i, post in enumerate(posts, 1):
+#         print(f"{i}. {post['title']} (ID: {post['id']})")
+
+#     if posts:
+#         print(f"\nFetching comments for first post with ID {posts[0]['id']}...")
+#         comments = fetch_comments(posts[0]['id'], limit=3)
+#         print(f"Number of comments fetched: {len(comments)}")
+#         for j, comment in enumerate(comments, 1):
+#             print(f"{j}. {comment['body'][:80]}...")
+
+# if __name__ == "__main__":
+#     test_fetch()
