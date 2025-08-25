@@ -1,0 +1,7 @@
+praw
+pyyaml
+transformers
+# torch
+# sqlalchemy
+streamlit
+pandas
